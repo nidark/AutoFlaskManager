@@ -664,7 +664,7 @@ namespace FlaskManager
                 return;
 
             if (Settings.OffensiveWhenLifeEs.Value && (playerHealth.HPPercentage * 100 > Settings.HpOffensive.Value &&
-                    (playerHealth.MaxES <= 0 || playerHealth.ESPercentage * 100 > Settings.EsOffensive.Value)))
+                    (playerHealth.MaxES <= 0 || playerHealth.ESPercentage * 100 >= Settings.EsOffensive.Value)))
                 return;
 
             if (Settings.DefFlaskEnable.Value && Settings.TreatOffenAsDef.Value)
