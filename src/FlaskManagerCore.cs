@@ -678,6 +678,9 @@ namespace FlaskManager
 
         private void FlaskMain()
         {
+            if (GameController == null || GameController.Window == null || GameController.Game.IngameState.Data.LocalPlayer == null || GameController.Game.IngameState.Data.LocalPlayer.Address == 0x00)
+                return;
+
             if (!GameController.Window.IsForeground())
                 return;
 
